@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 
 let defaultJournalData = [
     {
@@ -23,4 +23,17 @@ export function useJournalDate() {
 // Hook to call the function that edits the global data
 export function useJournalDispatch() {
     return useContext(JournaDispatchContext);
+}
+
+export function BlogProvider(props) {
+
+    let [exampleState, setExampleState] = useState("Hello from global level!");
+
+    return (
+        <JournalDataContext.Provider value={exampleState}>
+            <JournaDispatchContext.Provider value={setExampleState}>
+                {props.children}
+            </JournaDispatchContext.Provider>
+        </JournalDataContext.Provider>
+    )
 }
