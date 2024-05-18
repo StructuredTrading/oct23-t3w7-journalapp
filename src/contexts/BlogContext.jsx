@@ -7,7 +7,7 @@ let defaultJournalData = [
 		id: 0,
 		title:"Default journal post",
 		content: "Welcome to the website!",
-		author: "Sam",
+		author: "Alex",
 		date: Date.now()
 	}
 ];
@@ -19,7 +19,7 @@ export const JournalDispatchContext = createContext(null);
 
 // Hook to read the global data 
 export function useJournalData(){
-	console.log("Journal data is being accessed");
+	// console.log("Journal data is being accessed");
 	return useContext(JournalDataContext);
 }
 
