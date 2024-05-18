@@ -13,12 +13,14 @@ export default function EntryParent(props){
 
 
 	useEffect(() => {
-		let foundEntry = journalEntries.find(entry => entry.id === props.id);
-
-		setJournalEntry(foundEntry);
+		let foundEntry = journalEntries.find(entry => entry.id === parseInt(props.id));
+		if (foundEntry) {
+			setJournalEntry(foundEntry);
+			setEditMode(false);
+		}
 
 	// eslint-disable-next-line react-hooks/exhaustive-deps
-	},[]);
+	},[journalEntries]);
 
 	return(
 		<section>

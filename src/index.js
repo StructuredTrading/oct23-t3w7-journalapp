@@ -9,6 +9,7 @@ import EntryForm from './components/EntryForm';
 import EntryParent from './components/EntryParent';
 import { Template } from './pages/_template';
 import { HomePage } from './pages/HomePage';
+import { EntryViewPage } from './pages/EntryViewPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,7 +23,7 @@ root.render(
             {/* Shows ALL posts as read-only */}
             <Route index element={<HomePage />} />
             {/* Shows individual post with edit toggle */}
-            {/* <Route path="/view/:id" element={<EntryPage />} /> */}
+            <Route path="/view/:id" element={<EntryViewPage />} />
             {/* Show a form to make a new post */}
             {/* <Route path="/create" element={<NewEntryPage />} /> */}
           </Route>

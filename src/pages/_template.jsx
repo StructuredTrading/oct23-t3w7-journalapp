@@ -8,10 +8,10 @@ export function Template() {
                 <h1>Sam's Cool Journal </h1>
 
                 <NavLink to="/">
-                    Home
+                    <button>Home</button>
                 </NavLink>
                 <NavLink to="/create">
-                    Write a post
+                    <button>Write a post</button>
                 </NavLink>
             </nav>
 
